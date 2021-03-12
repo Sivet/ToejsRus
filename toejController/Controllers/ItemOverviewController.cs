@@ -8,8 +8,8 @@ using Microsoft.Extensions.Logging;
 namespace toejController.Controllers{
 
     [ApiController]
-    [Route("[controller]")]
-    class ItemOverviewController : ControllerBase{
+    [Route("[controller]/[action]")]
+    public class ItemOverviewController : ControllerBase{
 
         [HttpGet]
         public string GetImage(string imageName)
