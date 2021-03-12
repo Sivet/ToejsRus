@@ -26,7 +26,6 @@ namespace toejController
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -54,6 +53,12 @@ namespace toejController
             {
                 endpoints.MapControllers();
             });
+            app.UseSwagger();
+            app.UseSwaggerUI(opt =>
+           {
+               opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger for FabLab");
+               opt.RoutePrefix = ""; // change in development!
+           });
         }
     }
 }
