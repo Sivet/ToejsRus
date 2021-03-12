@@ -53,6 +53,9 @@ namespace toejController
             {
                 endpoints.MapControllers();
             });
+
+
+            //Delete later when we gonna be ready to release!!!
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
            {
