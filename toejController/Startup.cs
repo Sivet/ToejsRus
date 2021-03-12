@@ -59,7 +59,7 @@ namespace toejController
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
            {
-               opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger for FabLab");
+               opt.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger for Toej Butik");
                opt.RoutePrefix = ""; // change in development!
            });
         }
