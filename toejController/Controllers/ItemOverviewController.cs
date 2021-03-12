@@ -9,7 +9,7 @@ namespace toejController.Controllers{
 
     /// <summary>Controller responsible for GET/POST/DELETE for managing Item Catalog </summary>
     [ApiController]
-    [Route("toej")]
+    [Route("[controller]/[action]")]
     public class ItemOverviewController : ControllerBase{
 
         /// <summary>This GET method returns </summary>
