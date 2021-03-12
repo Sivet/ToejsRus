@@ -11,15 +11,7 @@ namespace toejController.Controllers{
     [ApiController]
     [Route("[controller]/[action]")]
     public class ItemOverviewController : ControllerBase{
-
-        /// <summary>This GET method returns </summary>
-        /// <returns>An arrey of MakerSpases</returns>
-        [HttpGet]
-        public string GetImage(string imageName)
-        {
-            return "s";
-        }
-
+        
         /// <summary>This GET method returns all MakerSpaces from DB</summary>
         /// <returns>An arrey of MakerSpases</returns>
         [HttpGet]
