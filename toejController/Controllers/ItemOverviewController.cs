@@ -15,7 +15,7 @@ namespace toejController.Controllers{
         /// <summary>This method takes a gender type</summary>
         /// <returns>Returns a collection of clothes types for that gender</returns>
         [HttpGet]
-        public string GetClothType(string gender)
+        public string GetClothTypes(string gender)
         {
             return "s";
         }
