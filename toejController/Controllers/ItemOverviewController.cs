@@ -12,34 +12,26 @@ namespace toejController.Controllers{
     [Route("[controller]/[action]")]
     public class ItemOverviewController : ControllerBase{
         
-        /// <summary>This GET method returns all MakerSpaces from DB</summary>
-        /// <returns>An arrey of MakerSpases</returns>
+        /// <summary>This method takes a gender type</summary>
+        /// <returns>Returns a collection of clothes types for that gender</returns>
         [HttpGet]
         public string GetClothType(string gender)
         {
             return "s";
         }
 
-        /// <summary>This GET method returns all MakerSpaces from DB</summary>
-        /// <returns>An arrey of MakerSpases</returns>
+        /// <summary>This method takes a clothes type and a gender</summary>
+        /// <returns>Returns a collection of all available clothes of that type</returns>
         [HttpGet]
-        public string GetAllofType(string type, string gender)
+        public string GetAllClothesOfType(string type, string gender)
         {
             return "s";
         }
 
-        /// <summary>This GET method returns all MakerSpaces from DB</summary>
-        /// <returns>An arrey of MakerSpases</returns>
+        /// <summary>This method takes the name of a given item</summary>
+        /// <returns>Returns all information on that item</returns>
         [HttpGet]
         public string GetInfoOnItem(string item)
-        {
-            return "s";
-        }
-
-        /// <summary>This GET method returns all MakerSpaces from DB</summary>
-        /// <returns>An arrey of MakerSpases</returns>
-        [HttpGet]
-        public string GetAllImgOnItem(string item)
         {
             return "s";
         }
