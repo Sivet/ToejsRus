@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:8292",
-      "sslPort": 44393
+      "applicationUrl": "http://localhost:32739",
+      "sslPort": 44397
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "toejController": {
+    "StoreInventory": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

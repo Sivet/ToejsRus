@@ -1,6 +1,6 @@
 using System;
 
-namespace toejController
+namespace StoreInventory
 {
     public class WeatherForecast
     {

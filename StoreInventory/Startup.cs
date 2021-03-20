@@ -14,7 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace toejController
+namespace StoreInventory
 {
     public class Startup
     {
@@ -28,11 +28,12 @@ namespace toejController
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
-                    Title = "toejController", 
+                    Title = "StoreInventory", 
                     Version = "v1" 
                     });
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -48,7 +49,7 @@ namespace toejController
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "toejController v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "StoreInventory v1"));
             }
 
             app.UseHttpsRedirection();
@@ -61,7 +62,6 @@ namespace toejController
             {
                 endpoints.MapControllers();
             });
-
             //Delete later when we gonna be ready to release!!!
             app.UseSwagger();
             app.UseSwaggerUI(opt =>

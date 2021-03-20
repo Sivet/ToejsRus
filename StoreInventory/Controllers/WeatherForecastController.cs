@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace toejController.Controllers
+namespace StoreInventory.Controllers
 {
     [ApiController]
     [Route("[controller]")]
