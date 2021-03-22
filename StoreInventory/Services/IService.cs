@@ -6,7 +6,7 @@ using StoreInventory.Models;
 namespace StoreInventory.Services{
     public interface IService{
         Task<bool> SaveChangesAsync();
-        Task<IEnumerable<string>> GetClothTypes(string gender);
+        Task<IEnumerable<ClothesType>> GetClothTypesAsync(Gender gender);
         Task<IEnumerable<Clothes>> GetAllClothesOfType(string type, string gender);
         Task<Clothes> GetInfoOnItem(string item);
          /*Task<Book> GetBookAsync(Guid id);

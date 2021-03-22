@@ -20,11 +20,15 @@ namespace StoreInventory.Controllers{
         }
         
         /// <summary>This method takes a gender type</summary>
-        /// <returns>Returns a collection of clothes types for that gender</returns>
+        /// <returns>A collection of clothes types for that gender</returns>
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetClothTypes(string gender)
+        public async Task<ActionResult<IEnumerable<ClothesType>>> GetClothTypes(Gender gender)
         {
-            return Ok("s");
+            var clothesTypes = await _service.GetClothTypesAsync(gender);
+            if(clothesTypes == null){
+                return NotFound();
+            }
+            return Ok(clothesTypes);
         }
 
         /// <summary>This method takes a clothes type and a gender</summary>

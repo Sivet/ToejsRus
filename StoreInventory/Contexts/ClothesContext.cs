@@ -7,8 +7,10 @@ using StoreInventory.Models;
 
 namespace StoreInventory.Contexts{
     public class ClothesContext : DbContext{
-        public ClothesContext(DbContextOptions<ClothesContext> opt) 
-            : base(opt){
+        public ClothesContext(DbContextOptions<ClothesContext> options) : base(options){
         }
+        public DbSet<Clothes> Clothes {get; set;}
+        public DbSet<ClothesType> ClothesTypes {get; set;}
+        public DbSet<Gender> Genders {get; set;}
     }
 }
