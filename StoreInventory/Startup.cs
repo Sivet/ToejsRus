@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using StoreInventory.Contexts;
+using StoreInventory.Services;
 
 namespace StoreInventory
 {
@@ -31,8 +32,10 @@ namespace StoreInventory
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ClothesContext>(opt =>
-                opt.UseSqlServer(Configuration.GetConnectionString("NonsensConnection")));
-                
+                opt.UseSqlServer(Configuration.GetConnectionString("ToejConnection")));
+
+            services.AddScoped<IService, SqlInventoryRepo>();
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
