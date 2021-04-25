@@ -32,7 +32,7 @@ namespace StoreInventory
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ClothesContext>(opt =>
-                opt.UseSqlServer(Configuration.GetConnectionString("ToejConnection")));
+                opt.UseSqlServer(Configuration.GetConnectionString("GearHostConnection"))); //ToejConnection
 
             services.AddScoped<IService, SqlInventoryRepo>();
             
